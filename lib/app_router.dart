@@ -1,5 +1,6 @@
-import 'dart:async';
+library navigation_listener;
 
+import 'dart:async';
 import 'package:navigation_listener/navigation_route.dart';
 
 abstract class AppRouter<T extends NavigationRoute> {

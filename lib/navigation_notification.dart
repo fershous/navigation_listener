@@ -1,11 +1,13 @@
+library navigation_listener;
+
 import 'package:flutter/material.dart';
 import 'package:navigation_listener/navigation_route.dart';
 
-sealed class NavigateNotification extends Notification {
+sealed class NavigateNotification<T extends NavigationRoute> extends Notification {
   const NavigateNotification();
 }
 
-final class NavigateToNotification extends NavigateNotification {
+final class NavigateToNotification<T extends NavigationRoute> extends NavigateNotification<T> {
   const NavigateToNotification({
     required this.route,
   });
@@ -13,6 +15,6 @@ final class NavigateToNotification extends NavigateNotification {
   final NavigationRoute route;
 }
 
-final class NavigateBackNotification extends NavigateNotification {
+final class NavigateBackNotification<T extends NavigationRoute> extends NavigateNotification<T> {
   const NavigateBackNotification();
 }

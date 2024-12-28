@@ -11,29 +11,29 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A wrapper that decouples navigation from the UI using Flutter's Notification system.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Decouples any navigating library, allowing to use any Router you want.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this plugin, add navigation_listener as a dependency in your pubspec.yaml file.
+
+dependencies:
+  navigation_listener: ^lastVersion
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Configure your main app to use MaterialApp.router and use the builder function to wrap the child application with a NavigationListener.
 
 ```dart
-const like = 'sample';
+MaterialApp.router(
+    builder: (context, child) => NavigationListener(child: child!,),
+);
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Feel free to open a PR with any feature you think it could be added.
