@@ -12,7 +12,7 @@ final class NavigateToNotification<T extends NavigationRoute> extends NavigateNo
     required this.route,
   });
 
-  final NavigationRoute route;
+  final T route;
 }
 
 final class NavigateBackNotification<T extends NavigationRoute> extends NavigateNotification<T> {

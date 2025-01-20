@@ -1,6 +1,6 @@
 name: navigation_listener
 description: "A small wrapper that decouples the navigation from the UI using Flutter's Notifications."
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/fershous/navigation_listener
 
 environment:
